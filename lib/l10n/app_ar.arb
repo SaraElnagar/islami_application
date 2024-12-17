@@ -1,0 +1,19 @@
+{
+  "helloWorld": "Hello World!",
+  "app_title":"اسلامي",
+  "sura_name":"اسم السورة",
+  "quran":"القران",
+  "hadeth":"الحديث",
+  "sebha":"السبحة",
+  "radio":"الراديو",
+  "hadeth_name":"اسم الحديث",
+  "number_of_praises":"عدد التسبيحات",
+  "quran_radio":"ازاعة القران الكريم",
+  "settings":"الاعدادات",
+  "language":"اللغة",
+  "english":"الانجليزية",
+  "arabic":"العربية",
+  "theme":"السمة",
+  "light":"مضئ",
+  "dark":"ليلي"
+}

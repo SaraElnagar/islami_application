@@ -1,0 +1,19 @@
+{
+  "helloWorld": "Hello World!",
+  "app_title":"Islami",
+  "sura_name":"Sura Name",
+  "quran":"Quran",
+  "hadeth":"Hadeth",
+  "sebha":"Sebha",
+  "radio":"Radio",
+  "hadeth_name":"Hadeth Name",
+  "number_of_praises":"Number of praises",
+  "quran_radio":"Holy Quran Radio",
+  "settings":"Settings",
+  "language":"Language",
+  "english":"English",
+  "arabic":"Arabic",
+  "theme":"Theme",
+  "light":"Light",
+  "dark":"Dark"
+}
