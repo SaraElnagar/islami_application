@@ -1,16 +1,22 @@
-# islami_app
+# Islami App
 
-A new Flutter project.
+## 🚀 About The App
+**Islami App** هو تطبيق شامل يحتوي على مجموعة من الأدوات الإسلامية المفيدة للمسلمين. يوفر التطبيق مجموعة من المميزات التي تشمل القرآن الكريم، الأحاديث، الأذكار، وإذاعة الراديو، ودعماً للغات العربية والإنجليزية فقط.
 
-## Getting Started
+## 🛠️ Features
+- **القرآن الكريم**: يحتوي على النصوص القرآنية .
+- **الأحاديث**: مجموعة من الأحاديث النبوية الشريفة.
+- **الأذكار**: عرض الأذكار اليومية .
+- **إذاعة الراديو**: إمكانية الاستماع إلى إذاعات إسلامية متنوعة.
+- **الوضع الليلي**: دعم الوضع الليلي لراحة العين.
+- **اللغات**: يدعم التطبيق اللغتين العربية والإنجليزية فقط.
 
-This project is a starting point for a Flutter application.
+## 🛠️ Skills & Tools
+- **Languages**: Dart  
+- **Framework**: Flutter  
+- **Tools**: Android Studio, Git
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📂 How to Install
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SaraElnagar/islami-app.git
