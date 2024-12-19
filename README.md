@@ -86,3 +86,4 @@ navigate, read Quranic texts, and interact with other features in their preferre
 1. Clone the repository:
    ```bash
    git clone https://github.com/SaraElnagar/islami_application.git
+   
