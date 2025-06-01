@@ -8,6 +8,8 @@ import 'package:provider/provider.dart';
 class SuraDetailsScreen extends StatefulWidget {
   static const String routeName = 'sura_details_screen';
 
+  const SuraDetailsScreen({super.key});
+
   @override
   State<SuraDetailsScreen> createState() => _SuraDetailsScreenState();
 }

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/home/hadeth/item_hadeth_name.dart';
 import 'package:islami_app/providers/app_config_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../app_colors.dart';
+import '../../l10n/app_localizations.dart';
 
 class HadethTab extends StatefulWidget {
+  const HadethTab({super.key});
+
   @override
   State<HadethTab> createState() => _HadethTabState();
 }
@@ -25,11 +27,11 @@ class _HadethTabState extends State<HadethTab> {
       children: [
         Expanded(flex: 1, child: Image.asset("assets/images/hadeth_logo.png")),
         provider.appTheme == ThemeMode.light
-            ? Divider(
+            ? const Divider(
                 color: AppColors.primaryLightColor,
                 thickness: 3,
               )
-            : Divider(
+            : const Divider(
                 color: AppColors.yellowColor,
                 thickness: 3,
               ),
@@ -50,11 +52,11 @@ class _HadethTabState extends State<HadethTab> {
                     ?.copyWith(color: AppColors.whiteColor),
               ),
         provider.appTheme == ThemeMode.light
-            ? Divider(
+            ? const Divider(
                 color: AppColors.primaryLightColor,
                 thickness: 3,
               )
-            : Divider(
+            : const Divider(
                 color: AppColors.yellowColor,
                 thickness: 3,
               ),
@@ -63,21 +65,21 @@ class _HadethTabState extends State<HadethTab> {
           child: ahadethList.isEmpty
               ? Center(
                   child: provider.appTheme == ThemeMode.light
-                      ? CircularProgressIndicator(
+                      ? const CircularProgressIndicator(
                           color: AppColors.primaryLightColor,
                         )
-                      : CircularProgressIndicator(
+                      : const CircularProgressIndicator(
                           color: AppColors.yellowColor,
                         ),
                 )
               : ListView.separated(
                   separatorBuilder: (context, index) {
                     return provider.appTheme == ThemeMode.light
-                        ? Divider(
+                        ? const Divider(
                             color: AppColors.primaryLightColor,
                             thickness: 2,
                           )
-                        : Divider(
+                        : const Divider(
                             color: AppColors.yellowColor,
                             thickness: 2,
                           );

@@ -9,7 +9,7 @@ import 'hadeth_tab.dart';
 class ItemHadethName extends StatelessWidget {
   Hadeth hadeth;
 
-  ItemHadethName({required this.hadeth});
+  ItemHadethName({super.key, required this.hadeth});
 
   @override
   Widget build(BuildContext context) {

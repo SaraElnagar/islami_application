@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/app_colors.dart';
 import 'package:islami_app/home/quran/item_sura_name.dart';
 import 'package:islami_app/providers/app_config_provider.dart';
 import 'package:provider/provider.dart';
+
+import '../../l10n/app_localizations.dart';
 
 class QuranTab extends StatelessWidget {
   List<String> name = [
@@ -122,6 +123,8 @@ class QuranTab extends StatelessWidget {
     "الفلق",
     "الناس"
   ];
+
+  QuranTab({super.key});
 
   @override
   Widget build(BuildContext context) {

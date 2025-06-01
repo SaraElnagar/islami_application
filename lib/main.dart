@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/home/home_screen.dart';
 import 'package:islami_app/home/quran/sura_details_screen.dart';
 import 'package:islami_app/my_theme_data.dart';
 import 'package:islami_app/providers/app_config_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'home/hadeth/hadeth_details_screen.dart';
+import 'l10n/app_localizations.dart';
 
 void main() async {
   runApp(ChangeNotifierProvider(
@@ -14,9 +15,12 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  late AppConfigProvider provider;
+
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<AppConfigProvider>(context);
+    provider = Provider.of<AppConfigProvider>(context);
+    initSharedPref();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
@@ -32,5 +36,19 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(provider.appLanguage),
     );
+  }
+
+  void initSharedPref() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? language = prefs.getString("language");
+    if (language != null) {
+      provider.appLanguage = language;
+    }
+    bool? isDark = prefs.getBool("isDark");
+    if (isDark == true) {
+      provider.changeTheme(ThemeMode.dark);
+    } else if (isDark == false) {
+      provider.changeTheme(ThemeMode.light);
+    }
   }
 }

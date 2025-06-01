@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/app_colors.dart';
 import 'package:islami_app/home/settings/language_bottom_sheet.dart';
 import 'package:islami_app/home/settings/theme_bottom_sheet.dart';
 import 'package:islami_app/providers/app_config_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../../l10n/app_localizations.dart';
+
 class SettingsTab extends StatefulWidget {
+  const SettingsTab({super.key});
+
   @override
   State<SettingsTab> createState() => _SettingsTabState();
 }
@@ -16,7 +19,7 @@ class _SettingsTabState extends State<SettingsTab> {
   Widget build(BuildContext context) {
     var provider = Provider.of<AppConfigProvider>(context);
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -32,7 +35,7 @@ class _SettingsTabState extends State<SettingsTab> {
                       .bodyMedium
                       ?.copyWith(color: AppColors.whiteColor),
                 ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           InkWell(
@@ -41,7 +44,7 @@ class _SettingsTabState extends State<SettingsTab> {
             },
             child: provider.appTheme == ThemeMode.light
                 ? Container(
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: AppColors.primaryLightColor,
@@ -55,7 +58,7 @@ class _SettingsTabState extends State<SettingsTab> {
                               : AppLocalizations.of(context)!.arabic,
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_drop_down,
                           size: 35,
                         ),
@@ -63,7 +66,7 @@ class _SettingsTabState extends State<SettingsTab> {
                     ),
                   )
                 : Container(
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: AppColors.yellowColor,
@@ -80,7 +83,7 @@ class _SettingsTabState extends State<SettingsTab> {
                               .bodySmall
                               ?.copyWith(color: AppColors.whiteColor),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_drop_down,
                           size: 35,
                           color: AppColors.whiteColor,
@@ -89,7 +92,7 @@ class _SettingsTabState extends State<SettingsTab> {
                     ),
                   ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           provider.appTheme == ThemeMode.light
@@ -104,7 +107,7 @@ class _SettingsTabState extends State<SettingsTab> {
                       .bodyMedium
                       ?.copyWith(color: AppColors.whiteColor),
                 ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           InkWell(
@@ -113,7 +116,7 @@ class _SettingsTabState extends State<SettingsTab> {
             },
             child: provider.appTheme == ThemeMode.light
                 ? Container(
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: AppColors.primaryLightColor,
@@ -127,7 +130,7 @@ class _SettingsTabState extends State<SettingsTab> {
                               : AppLocalizations.of(context)!.dark,
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_drop_down,
                           size: 35,
                         ),
@@ -135,7 +138,7 @@ class _SettingsTabState extends State<SettingsTab> {
                     ),
                   )
                 : Container(
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: AppColors.yellowColor,
@@ -152,7 +155,7 @@ class _SettingsTabState extends State<SettingsTab> {
                               .bodySmall
                               ?.copyWith(color: AppColors.whiteColor),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_drop_down,
                           size: 35,
                           color: AppColors.whiteColor,

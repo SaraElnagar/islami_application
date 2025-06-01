@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/providers/app_config_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../app_colors.dart';
+import '../../l10n/app_localizations.dart';
 
 class ThemeBottomSheet extends StatefulWidget {
+  const ThemeBottomSheet({super.key});
+
   @override
   State<ThemeBottomSheet> createState() => _ThemeBottomSheetState();
 }
@@ -17,7 +19,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
   Widget build(BuildContext context) {
     provider = Provider.of<AppConfigProvider>(context);
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -30,7 +32,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
                 ? getSelectedItemWidget(AppLocalizations.of(context)!.light)
                 : getUnSelectedItemWidget(AppLocalizations.of(context)!.light),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           InkWell(
@@ -63,12 +65,12 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
                     .bodySmall!
                     .copyWith(color: AppColors.whiteColor)),
         provider.appTheme == ThemeMode.light
-            ? Icon(
+            ? const Icon(
                 Icons.check,
                 color: AppColors.whiteColor,
                 size: 35,
               )
-            : Icon(
+            : const Icon(
                 Icons.check,
                 color: AppColors.yellowColor,
                 size: 35,

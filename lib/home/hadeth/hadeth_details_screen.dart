@@ -9,6 +9,8 @@ import '../../providers/app_config_provider.dart';
 class HadethDetailsScreen extends StatefulWidget {
   static const String routeName = 'hadeth_details_screen';
 
+  const HadethDetailsScreen({super.key});
+
   @override
   State<HadethDetailsScreen> createState() => _HadethDetailsScreenState();
 }

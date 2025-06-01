@@ -7,7 +7,7 @@ import '../../providers/app_config_provider.dart';
 class ItemHadethDetails extends StatelessWidget {
   String content;
 
-  ItemHadethDetails({required this.content});
+  ItemHadethDetails({super.key, required this.content});
 
   @override
   Widget build(BuildContext context) {
